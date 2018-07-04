@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Muriel</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/tachyons.css">
+<script type="text/javascript" src="../js/two.min.js"></script>
+<script type="text/javascript" src="../js/Tween.js"></script>
+<script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+  <style>
+    
+    footer {
+      bottom: 0;
+    }
+    #assets {
+      display: none;
+    }
+    
+/*
+    #rl {
+      background-image: url("_images/splosion.jpg");
+      background-repeat: none;
+      background-size: cover;
+    }
+*/
+
+  </style>
+  
+  <body>
+    
+    <section id="rl" class="w-100 vh-100 pa0 bg-washed-red" onmousemove="showCoords(event)">
+      <header class="fixed w-100 pv4 ph2 ph4-ns mt0">
+        <nav class="lh-solid">
+          <a class="link blue fw3 fl" href="">SEAN CATANGUI</a>
+          <a class="link blue fw3 fr" href="">SKETCH #16</a>
+        </nav>
+      </header>
+      
+      <div class="fixed" id="assets">
+    
+        <svg width="49px" height="48px" viewBox="0 0 49 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.732421875,48 L0.732421875,46.6992188 L2.52539062,46.6992188 C4.5410257,46.6992188 5.97069891,46.0546939 6.81445312,44.765625 C7.3300807,43.9921836 7.58789062,42.257826 7.58789062,39.5625 L7.58789062,8.765625 C7.58789062,5.78904762 7.25976891,3.925785 6.60351562,3.17578125 C5.68944855,2.14452609 4.33008715,1.62890625 2.52539062,1.62890625 L0.732421875,1.62890625 L0.732421875,0.328125 L20.1386719,0.328125 C27.2637075,0.328125 32.6835752,1.13671066 36.3984375,2.75390625 C40.1132998,4.37110184 43.1015512,7.06638738 45.3632812,10.8398438 C47.6250113,14.6133001 48.7558594,18.9726315 48.7558594,23.9179688 C48.7558594,30.5508144 46.7402545,36.0937277 42.7089844,40.546875 C38.1855243,45.5156498 31.2949682,48 22.0371094,48 L0.732421875,48 Z M14.3378906,44.5546875 C17.314468,45.2109408 19.8105368,45.5390625 21.8261719,45.5390625 C27.2636991,45.5390625 31.7753727,43.6289254 35.3613281,39.8085938 C38.9472836,35.9882621 40.7402344,30.8086264 40.7402344,24.2695312 C40.7402344,17.6835608 38.9472836,12.4922065 35.3613281,8.6953125 C31.7753727,4.89841852 27.16995,3 21.5449219,3 C19.4355363,3 17.0332166,3.33984035 14.3378906,4.01953125 L14.3378906,44.5546875 Z" id="D" fill="#000000"></path>
+    </g>
+</svg>
+                
+        <svg width="51px" height="49px" viewBox="0 0 51 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M32.4433594,33.0390625 L13.9863281,33.0390625 L10.7519531,40.5625 C9.95507414,42.4140718 9.55664062,43.7968704 9.55664062,44.7109375 C9.55664062,45.4375036 9.90234029,46.0761691 10.59375,46.6269531 C11.2851597,47.1777371 12.7792854,47.5351554 15.0761719,47.6992188 L15.0761719,49 L0.064453125,49 L0.064453125,47.6992188 C2.05665059,47.3476545 3.3457002,46.8906278 3.93164063,46.328125 C5.1269591,45.2031194 6.45116461,42.917986 7.90429688,39.4726562 L24.6738281,0.23828125 L25.9042969,0.23828125 L42.4980469,39.8945312 C43.8339911,43.0820472 45.0468696,45.1503859 46.1367188,46.0996094 C47.2265679,47.0488329 48.7441309,47.5820307 50.6894531,47.6992188 L50.6894531,49 L31.8808594,49 L31.8808594,47.6992188 C33.7793064,47.6054683 35.0624967,47.2890652 35.7304688,46.75 C36.3984408,46.2109348 36.7324219,45.5546914 36.7324219,44.78125 C36.7324219,43.7499948 36.2636766,42.1211049 35.3261719,39.8945312 L32.4433594,33.0390625 Z M31.4589844,30.4375 L23.3730469,11.171875 L15.0761719,30.4375 L31.4589844,30.4375 Z" id="A" fill="#000000"></path>
+    </g>
+</svg>
+                
+        <svg width="62px" height="48px" viewBox="0 0 62 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.9511719,48 L10.5292969,7.88671875 L10.5292969,39.7382812 C10.5292969,42.6679834 10.8457,44.4960901 11.4785156,45.2226562 C12.3457075,46.2070362 13.7167875,46.6992188 15.5917969,46.6992188 L17.2792969,46.6992188 L17.2792969,48 L0.685546875,48 L0.685546875,46.6992188 L2.37304688,46.6992188 C4.38868195,46.6992188 5.81835516,46.0898498 6.66210938,44.8710938 C7.17773695,44.12109 7.43554688,42.4101696 7.43554688,39.7382812 L7.43554688,8.58984375 C7.43554688,6.4804582 7.20117422,4.95703594 6.73242188,4.01953125 C6.40429523,3.33984035 5.80078564,2.77148666 4.921875,2.31445312 C4.04296436,1.85741959 2.6308691,1.62890625 0.685546875,1.62890625 L0.685546875,0.328125 L14.1855469,0.328125 L31.4824219,37.6289062 L48.4980469,0.328125 L61.9980469,0.328125 L61.9980469,1.62890625 L60.3457031,1.62890625 C58.3066304,1.62890625 56.8652386,2.23827516 56.0214844,3.45703125 C55.5058568,4.207035 55.2480469,5.91795539 55.2480469,8.58984375 L55.2480469,39.7382812 C55.2480469,42.6679834 55.5761686,44.4960901 56.2324219,45.2226562 C57.0996137,46.2070362 58.4706938,46.6992188 60.3457031,46.6992188 L61.9980469,46.6992188 L61.9980469,48 L41.7480469,48 L41.7480469,46.6992188 L43.4355469,46.6992188 C45.4746196,46.6992188 46.9042928,46.0898498 47.7246094,44.8710938 C48.240237,44.12109 48.4980469,42.4101696 48.4980469,39.7382812 L48.4980469,7.88671875 L30.1113281,48 L28.9511719,48 Z" id="M" fill="#000000"></path>
+    </g>
+</svg>
+
+        <svg width="53px" height="49px" viewBox="0 0 53 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M0.552734375,0.328125 L13.4902344,0.328125 L42.6347656,36.0820312 L42.6347656,8.58984375 C42.6347656,5.6601416 42.3066439,3.83203488 41.6503906,3.10546875 C40.7831988,2.12108883 39.4121187,1.62890625 37.5371094,1.62890625 L35.8847656,1.62890625 L35.8847656,0.328125 L52.4785156,0.328125 L52.4785156,1.62890625 L50.7910156,1.62890625 C48.7753805,1.62890625 47.3457073,2.23827516 46.5019531,3.45703125 C45.9863255,4.207035 45.7285156,5.91795539 45.7285156,8.58984375 L45.7285156,48.7734375 L44.4628906,48.7734375 L13.0332031,10.3828125 L13.0332031,39.7382812 C13.0332031,42.6679834 13.3496062,44.4960901 13.9824219,45.2226562 C14.8730513,46.2070362 16.2441314,46.6992188 18.0957031,46.6992188 L19.7832031,46.6992188 L19.7832031,48 L3.18945312,48 L3.18945312,46.6992188 L4.84179687,46.6992188 C6.88086957,46.6992188 8.32226141,46.0898498 9.16601562,44.8710938 C9.6816432,44.12109 9.93945312,42.4101696 9.93945312,39.7382812 L9.93945312,6.5859375 C8.55663371,4.96874191 7.50781607,3.90234633 6.79296875,3.38671875 C6.07812143,2.87109117 5.02930379,2.39062723 3.64648437,1.9453125 C2.96679348,1.73437395 1.93555379,1.62890625 0.552734375,1.62890625 L0.552734375,0.328125 Z" id="N" fill="#000000"></path>
+            </g>
+        </svg>        
+        
+<!--
+        <svg width="9px" height="8px" viewBox="0 0 9 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch 
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M4.5,0.1796875 C5.60156801,0.1796875 6.52734,0.560543066 7.27734375,1.32226562 C8.0273475,2.08398818 8.40234375,3.00390086 8.40234375,4.08203125 C8.40234375,5.16016164 8.02148818,6.08007432 7.25976562,6.84179688 C6.49804307,7.60351943 5.57813039,7.984375 4.5,7.984375 C3.42186961,7.984375 2.50195693,7.60351943 1.74023438,6.84179688 C0.978511816,6.08007432 0.59765625,5.16016164 0.59765625,4.08203125 C0.59765625,2.98046324 0.978511816,2.05469125 1.74023438,1.3046875 C2.50195693,0.55468375 3.42186961,0.1796875 4.5,0.1796875 Z" id="." fill="#000000"></path>
+            </g>
+        </svg>
+-->
+        
+      </div>
+      
+      <footer class="fixed w-100 pv4 ph2 ph4-ns">
+        <nav class="lh-solid">
+          <a class="link blue fw3 fr" href="#">3/18</a>
+        </nav>
+        <p class="link blue fw3 f4 tc pv0 mv0 line-height-solid">SFPC</p>        
+      </footer>        
+    </section>
+
+    <script>  
+      
+      var mouse_x;
+      var mouse_y;
+      
+      function showCoords(event) {
+          mouse_x = event.clientX;
+          mouse_y = event.clientY;
+      }
+      
+      var elem = document.getElementById('rl');
+      var params = { width: window.innerWidth, height: window.innerHeight };
+      var two = new Two(params).appendTo(elem);
+      
+      var style = window.getComputedStyle(elem, null).getPropertyValue('font-size');
+      var font_size = parseFloat(style);
+      
+      var mid = {x: two.width / 2, y: two.height / 2};
+      var width = two.width;
+      var height = two.height;
+      
+      var grid_rect;
+      var rows = [];
+      var cols = [];
+      var row_h = height / rows.length;
+      var col_w = width / cols.length;
+      
+      var letter;
+      var letters = [];
+      var stuff = [];
+            
+      $('#assets svg').each(function(i, el) {
+        letter = two.interpret(el).center();
+        letter.translation.set(two.width / 3, two.height / 2);
+        letter.fill = 'blue';        
+//        letter.stroke = 'white';
+        letters.push(letter);
+       _.each(letter.children, function(child) {
+          _.each(child.vertices, function(v) {
+            console.log("f");
+          });
+        });
+      });
+        
+//      console.log(stuff.length);
+      
+      ///////////////////////////////////////////      
+
+//      make_columns(4, 'blue');
+//      make_rows(10, 'blue');
+        
+      for(i = 0; i < letters.length; i++) {
+        letters[i].translation.set(200 + 100*i, mid.y);
+      }
+      
+      two.bind('update', function(frameCount) {
+        var t = two.frameCount / 60;
+        for(i = 0; i < letters.length; i++) {
+          letters[i].scale = 0.2 + Math.abs(letters[i].translation.x - mouse_x) / 100;
+        }        
+      }).play();  
+      
+        
+//      two.update();
+      
+      ///////////////////////////////////////////
+      
+      
+//      LAYOUT FUNCTIONS
+      function make_columns(col, color) {
+        for(i = 0; i<col; i++) {
+          grid_rect = two.makeRectangle(width/col/2 + i*width/col, mid.y, width/col, height);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          cols.push(grid_rect);
+        }  
+      }
+      
+      function make_rows(row, color) {
+        for(i = 0; i<row; i++) {
+          grid_rect = two.makeRectangle(mid.x, height/row/2 + i*height/row, width, height/row);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          rows.push(grid_rect);
+        }  
+      }
+      
+//      MISC. FUNCTIONS
+      function rem_to_pix(rem) {
+        return rem * font_size;
+      }
+      
+    </script>
+    
+  </body>

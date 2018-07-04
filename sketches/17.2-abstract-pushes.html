@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>MAEDA</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../tachyons.css">
+<script type="text/javascript" src="../two.min.js"></script>
+  <script type="text/javascript" src="../underscore-min.js"></script>
+<script type="text/javascript" src="../Tween.js"></script>
+<script type="text/javascript" src="../RequestAnimationFrame.js"></script>  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+  <style>
+    html {
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    
+    footer {
+      bottom: 0;
+    }
+
+  </style>
+  
+  <body>
+    
+    <section id="rl" class="w-100 vh-100 pa0 bg-washed-red" onmousemove="showCoords(event)">
+      <header class="fixed w-100 pv4 ph2 ph4-ns mt0">
+        <nav class="lh-solid">
+          <a class="link black fw3 fl" href="">SEAN CATANGUI</a>
+          <a class="link black fw3 fr" href="">SKETCH #17</a>
+        </nav>
+      </header>
+      
+      <footer class="fixed w-100 pv4 ph2 ph4-ns">
+        <nav class="lh-solid">
+          <a class="link black fw3 fr" href="#">3/19</a>
+        </nav>
+        <p class="link black fw3 f4 tc pv0 mv0 line-height-solid">SFPC</p>        
+      </footer>        
+    </section>
+
+    <script>  
+      
+      var mouse_x;
+      var mouse_y;
+      
+      function showCoords(event) {
+          mouse_x = event.clientX;
+          mouse_y = event.clientY;
+      }
+      
+      var elem = document.getElementById('rl');
+      var params = { width: window.innerWidth, height: window.innerHeight };
+      var two = new Two(params).appendTo(elem);
+      
+      var mid = {x: two.width / 2, y: two.height / 2};
+      var width = two.width;
+      var height = two.height;
+      
+      var grid_rect;
+      var rows = [];
+      var cols = [];
+      var row_h = height / rows.length;
+      var col_w = width / cols.length;
+      
+      var colors = [
+        'rgb(236,112,99)',
+        'rgb(155,96,52)',
+        'rgb(245,189,75)',
+        'rgb(231,231,130)',
+        'rgb(234,240,183)',
+        'rgb(173,213,167)',
+        'rgb(106,183,128)',
+        'rgb(109,191,137)',
+        'rgb(34,95,62)',
+        'rgb(124,199,177)',
+        'rgb(106,188,204)',
+        'rgb(131,207,240)',
+        'rgb(184,209,236)',
+        'rgb(62,88,167)',
+        'rgb(212,175,207)',
+        'rgb(245,219,234)',
+        'rgb(250,190,208)',
+        'rgb(245,287,203)',
+        'rgb(211,3,34)',
+        'rgb(90,86,88)',
+        'rgb(113,113,113)',
+        'rgb(202,202,202)',
+      ];
+      
+      var styles = {
+        family: 'Helvetica Neue',
+        size: 256,
+        fill: 'none',
+        stroke: 'white',
+        linewidth: '2.5',
+        weight: 500
+      };
+      
+      ///////////////////////////////////////////
+      make_columns(16, 'blue');
+      make_rows(12, 'blue');
+      ///////////////////////////////////////////
+      
+      var circle;
+      var col0 = [];
+      var col1 = [];
+      var col2 = [];
+      var col3 = [];
+      var col4 = [];
+      var col5 = [];
+      
+      var blob = two.makeGroup();
+      var radius;
+      
+//          50 * Math.sin((10*Math.sin(t)) + i))
+          
+          
+      two.bind('update', function(frameCount) {
+        two.clear();
+        radius = {x: 25, y: 25};
+        var t = two.frameCount / 60;
+        for(i = 0; i < rows.length; i++) {
+          for(j = 0; j < cols.length; j++) {
+            circle = two.makeEllipse(cols[j].translation.x, 
+                                 rows[i].translation.y, 
+                                 radius.x, radius.y);
+          }
+          col0.push(circle);
+        }
+        
+//        text = two.makeText('to see', mid.x * 1.20, mid.y, styles);
+        
+        
+      }).play();
+      
+      
+      
+      two.update();
+      
+      ///////////////////////////////////////////
+      
+      
+//      LAYOUT FUNCTIONS
+      function make_columns(col, color) {
+        for(i = 0; i<col; i++) {
+          grid_rect = two.makeRectangle(width/col/2 + i*width/col, mid.y, width/col, height);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          cols.push(grid_rect);
+        }  
+      }
+      
+      function make_rows(row, color) {
+        for(i = 0; i<row; i++) {
+          grid_rect = two.makeRectangle(mid.x, height/row/2 + i*height/row, width, height/row);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          rows.push(grid_rect);
+        }  
+      }
+      
+//      MISC. FUNCTIONS
+      function rem_to_pix(rem) {
+        return rem * font_size;
+      }
+//      MATH
+      function sin(x) { return Math.sin(x); }
+      function cos(x) { return Math.cos(x); }
+      
+    </script>
+    
+  </body>
+  

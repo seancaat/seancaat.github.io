@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Whitney</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../tachyons.css">
+<script type="text/javascript" src="../two.min.js"></script>
+<script type="text/javascript" src="../underscore-min.js"></script>
+<script type="text/javascript" src="../Tween.js"></script>
+<script type="text/javascript" src="../RequestAnimationFrame.js"></script>  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+  <style>
+    
+    footer {
+      bottom: 0;
+    }
+    
+/*
+    #rl {
+      background-image: url("_images/splosion.jpg");
+      background-repeat: none;
+      background-size: cover;
+    }
+*/
+
+  </style>
+  
+  <body>
+    
+    <section id="rl" class="w-100 vh-100 pa0">
+      <header class="fixed w-100 pv4 ph2 ph4-ns">
+        <nav class="lh-solid">
+          <a class="link fl" href="">SEAN CATANGUI</a>
+          <a class="link fr" href="">SKETCH #14</a>
+        </nav>
+      </header>
+      
+      <footer class="fixed w-100 pv4 ph2 ph4-ns">
+        <nav class="lh-solid">
+          <a class="link fw4 fr" href="#">3/14</a>
+        </nav>
+        <p class="line fw4 f4 tc pv0 mv0 line-height-solid">SFPC</p>
+        
+      </footer>
+      
+    </section>
+
+    <script>      
+      var elem = document.getElementById('rl');
+      var params = { width: window.innerWidth, height: window.innerHeight };
+      var two = new Two(params).appendTo(elem);
+
+      var style = window.getComputedStyle(elem, null).getPropertyValue('font-size');
+      var font_size = parseFloat(style);
+      
+      var mid = {x: two.width / 2, y: two.height / 2};
+      var width = two.width;
+      var height = two.height;
+      
+      var grid_rect;
+      var grid_rows = [];
+      var grid_cols = [];
+      
+      var d = [];
+      
+      for(i = 0; i < 5; i++) {
+        d.push(rem_to_pix(Math.pow(2, i)));
+        // 16px
+        // 32px
+        // 64px
+        // 128px
+        // 256px
+      }
+      
+      var colors = [
+        'rgb(249,14,27)',
+        'rgb(250,40,251)',
+        'rgb(11,36,250)',
+        'rgb(45,254,254)',
+        'rgb(254,253,56)',
+        'rgb(41,251,47)'
+      ];
+
+      var styles = {
+        family: 'Helvetica Neue',
+        size: d[3],
+        fill: 'none',
+        stroke: 'white',
+        linewidth: '2.5',
+        weight: 500,
+        };
+      
+      ///////////////////////////////////////////      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      make_columns(4, 'orange');      
+      make_rows(3, 'orange');
+      
+      
+      var cir = two.makeCircle(mid.x, mid.y, width / grid_cols.length);
+      
+      
+      two.update();
+      
+      
+      two.bind('update', function(frameCount) {        
+        
+        t = two.frameCount / 20;
+        
+        cir.vertices[0].x += 1 * Math.cos(t);
+        cir.vertices[0].y += 1 * Math.sin(t);
+        
+//        cir.vertices[3].x -= 1 * Math.cos(t + 4);
+//        cir.vertices[3].y += 1 * Math.sin(t + 4);
+//        
+//        cir.vertices[4].x -= 0.4 * Math.cos(t + 4);
+//        cir.vertices[4].y -= 0.45 * Math.sin(t + 4);
+//        
+//        cir.vertices[5].x -= 1 * Math.cos(t + 4);
+//        cir.vertices[5].y += 1 * Math.sin(t + 4);
+      
+
+    
+      }).play();
+      
+      
+      
+      
+      //// time amplitutde frequency phase
+      
+      
+      
+      ///////////////////////////////////////////
+      
+//      LAYOUT FUNCTIONS
+      function make_columns(col, color) {
+        for(i = 0; i<col; i++) {
+          grid_rect = two.makeRectangle(width/col/2 + i*width/col, mid.y, width/col, height);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          grid_cols.push(grid_rect);
+        }  
+      }
+      
+      function make_rows(row, color) {
+        for(i = 0; i<row; i++) {
+          grid_rect = two.makeRectangle(mid.x, height/row/2 + i*height/row, width, height/row);
+          grid_rect.noFill();
+          grid_rect.linewidth = 16;
+          grid_rect.stroke = color;
+          grid_rect.opacity = 0.05;
+          if (color == 'undefined') {
+            grid_rect.noStroke();
+          }
+          grid_rows.push(grid_rect);
+        }  
+      }
+      
+//      MISC. FUNCTIONS
+      function rem_to_pix(rem) {
+        return rem * font_size;
+      }
+      
+      function _x(m, t, b) { 
+        return Math.cos(m * t + b); 
+      } 
+      
+      function _y(m, t, b) { 
+        return Math.sin(m * t + b); 
+      }
+  
+      
+    </script>
+    
+  </body>

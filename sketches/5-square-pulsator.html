@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>You're Still the One</title>
+<meta name="Sean" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/tachyons.css">
+<script type="text/javascript" src="../js/two.min.js"></script>
+<script type="text/javascript" src="../js/Tween.js"></script>
+<script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>  
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
+  <style>
+    iframe {
+      -webkit-user-select: none; /* Safari */        
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE10+/Edge */
+      user-select: none; /* Standard */
+      position: fixed;
+      top: 0;
+    }
+  </style>
+  
+  <body>
+    
+    <section id="rl" class="w-100 vh-80 bg-near-black">
+      
+<!--      <iframe src="https://open.spotify.com/embed?uri=spotify:track:6aSI5qgrJU9gsjUTfXlx5q" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>-->
+      
+<!--      <iframe src="https://tools.applemusic.com/embed/v1/song/265919662?country=us&itscg=30200&itsct=afftoolset_1" height="110px" width="" frameborder="0"></iframe>-->
+      
+    </section>
+  
+    <script>
+      
+      var colors = [
+        'rgb(249,14,27)',
+        'rgb(250,40,251)',
+        'rgb(11,36,250)',
+        'rgb(45,254,254)',
+        'rgb(254,253,56)',
+        'rgb(41,251,47)'
+      ];
+      
+      // should I do a 'joker' color scheme?
+      
+      var elem = document.getElementById('rl');
+      var params = { width: window.innerWidth, height: window.innerHeight };
+      var two = new Two(params).appendTo(elem);
+
+      var mid = {x: two.width / 2, y: two.height / 2};
+      var width = two.width;
+      var height = two.height;
+      
+      $( "#rl" ).click(function() {
+        map();
+        scatter();
+      });
+      
+      
+      // make this mobile responsive
+      var small_base_w = 250;
+      var big_base_w = small_base_w * 1.79;
+      
+      var smalls = [];
+      var bigs = [];
+      
+      var v_shift_small;
+      var h_shift_small;
+      var d_shift_small;
+      var v_shift_big;
+      var h_shift_big;
+      var d_shift_big;
+      
+      for (i = 0; i<3; i++) {
+        var big = two.makeRectangle(mid.x, mid.y, big_base_w, big_base_w);
+        big.stroke = "rgb(254, 255,255)";
+        big.linewidth = Math.pow(i, 0.75) + 1;
+//        big.noStroke();
+        big.noFill();
+//        big.fill = colors[i + 3];
+//        big.opacity = 0.6;
+        bigs.push(big);
+      }
+      
+//      var base1 = two.makeRectangle(mid.x, mid.y, big_base_w, big_base_w);
+//      base1.noStroke();
+      
+      for (i = 0; i<3; i++) {
+        var small = two.makeRectangle(mid.x, mid.y, small_base_w, small_base_w);
+        small.stroke = "rgb(254, 255,255)";
+        small.linewidth = Math.pow(i, 1.3) + 0.75;
+//        small.noStroke();
+        small.noFill();
+//        small.fill = colors[i];
+//        small.opacity = 0.6;
+        smalls.push(small);
+      }
+      
+//      var base2 = two.makeRectangle(mid.x, mid.y, small_base_w, small_base_w);
+//      base2.fill = "#111111";
+//      base2.noStroke();
+      
+//      var f = two.makeRectangle(mid.x, mid.y, small_base_w, small_base_w);
+//      var s = two.makeRectangle(mid.x, mid.y, big_base_w, big_base_w);
+//      f.stroke = 'yellow';
+//      s.stroke = 'yellow';
+//      f.noFill();
+//      s.noFill();
+      
+      two.update();
+      
+      // Generate random coordinates
+      function map() {
+
+        if (Math.random() < 0.5) {
+          v_shift_small = small_base_w * 0.1;
+          v_shift_big = big_base_w * 0.06;
+        } else {
+          v_shift_small = small_base_w * -0.1;
+          v_shift_big = big_base_w * -0.06;
+        }
+        
+        if (Math.random() < 0.5) {
+          h_shift_small = v_shift_small * 4/3;
+          h_shift_big = v_shift_big * 4/5;
+        } else {
+          h_shift_small = v_shift_small * -4/3;
+          h_shift_big = v_shift_big * -4/5;
+        }
+        
+        d_shift_small = {x: 2/3 * v_shift_small * -1, y: v_shift_small * -1};
+        d_shift_big = {x: h_shift_big * -1, y: v_shift_big * -1};
+        
+      }
+      
+      // move each square to those coordinates
+      function scatter() {
+        
+        var small_tween_0 = new TWEEN.Tween(smalls[0].translation)
+                               .to({x: mid.x + h_shift_small}, 200)                               
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+        var small_tween_1 = new TWEEN.Tween(smalls[1].translation)
+                               .to({y: mid.y + v_shift_small}, 200)
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+        var small_tween_2 = new TWEEN.Tween(smalls[2].translation)
+                               .to({x: mid.x + d_shift_small.x, y: mid.y + d_shift_small.y}, 201)
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+         var big_tween_0 = new TWEEN.Tween(bigs[0].translation)
+                               .to({x: mid.x + h_shift_big}, 200)                               
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+        var big_tween_1 = new TWEEN.Tween(bigs[1].translation)
+                               .to({y: mid.y + v_shift_big}, 200)
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+        var big_tween_2 = new TWEEN.Tween(bigs[2].translation)
+                               .to({x: mid.x + d_shift_big.x, y: mid.y + d_shift_big.y}, 201)
+                               .easing(TWEEN.Easing.Exponential.Out)
+                               .start();
+        
+        small_tween_2.onComplete(function () {
+          TWEEN.removeAll();
+        });
+        
+        animate();
+        
+
+        function animate() {
+            requestAnimationFrame(animate);
+            TWEEN.update();
+            two.update();
+        }  
+      }
+      
+      
+    </script>
+    
+  </body>
