@@ -1,443 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116773957-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-116773957-1');
-    </script>
-
+    <title>Hello!</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>
-      @_catangui
-    </title>
-    <meta name="author" content="Sean Catangui">
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/tachyons.css">
-  </head>
-
-
-  <body class="fw3 w-90-ns center" style="max-width: 1200px;">
-    <header class="ph4-l pv3-m pv4-ns pv0 mt0 cf">
-      <div class="fl w0 w-third-l pv2 ph2 ph3-ns">
-        <div class="pv4-l"></div>
-      </div>
-      <div class="fl w-100 w-two-thirds-l ph2 ph3-ns">
-        <h1 class="f2 fw6 i ttu tracked-tight">Sean Catangui</h1>
-      </div>
-
-      <div class="fl w0 w-third-l">
-        <div class="pv4-l"></div>
-      </div>
-      <div class="fl w-two-thirds-m w-third-l ph2 ph3-ns pv0 mt0">
-        <p class="measure-wide lh-copy fw3">
-          I'm an artist who works mostly with graphic design and computer programming. My goal is to explore cultural systems through code and to help others do the same.
-        </p>
-        <p class="measure-wide lh-copy fw3">
-          Brooklyn, NY
-        </p>
-      </div>
-      <div class="fl w-third-l ph2 ph3-ns">
-        <p class="measure lh-copy fw3">
-          Twitter: <a target="_blank" href="https://twitter.com/_catangui?lang=en" class="black link fw6 i">@_catangui</a><br>
-          Instagram: <a target="_blank" href="https://www.instagram.com/_catangui/" class="black link fw6 i">@_catangui</a><br>
-          Apple Music: <a target="_blsank" href="https://itunes.apple.com/profile/s3ancat" class="black link fw6 i">@s3ancat</a><br>
-          GitHub: <a target="_blank" href="https://github.com/seancaat" class="black link fw6 i">seancaat</a><br>
-        </p>
-        <p class="measure lh-copy fw3">
-          Email: <a target="_blank" href="mailto:seancaat@gmail.com" class="black link fw6 i">seancaat@gmail.com</a><br>
-        </p>
-
-      </div>
-    </header>
-
-    <!--  container  -->
-
     
-    <section class="cf w-100 ph4-l pv3-m pv4">
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            <a target="_blank" href="https://www.are.na/sean-catangui/generative-drawing" class="bb link black">Generative Drawing</a>: hacking my own custom drawing tools.
-          </p>
-        </div>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://www.are.na/block/4958214">
-          <div class="aspect-ratio aspect-ratio--6x4">
-              <div class="aspect-ratio--object cover" style="background:url(images/scribbledots.jpg); background-repeat: no-repeat"></div>
-            </div>
-        </a>
-        <a target="_blank" href="https://www.are.na/block/4958214" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Composition 9/04</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-          <a target="_blank" href="https://www.are.na/block/4912612">
-            <div class="aspect-ratio aspect-ratio--6x4">
-                <div class="aspect-ratio--object cover" style="background:url(images/phyllo.jpg); background-repeat: no-repeat"></div>
-              </div>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>  
+  <body>
+    <h1>
+      Sean Catangui
+      <br>
+      Design + Code
+    </h1>
+    
+    <nav>
+      <ul>
+        
+        <li>
+          <a href="#">
+            Info
           </a>
-          <a target="_blank" href="https://www.are.na/block/4912612" class="ph0-ns pb3 link db">
-            <p class="f5 mb3 lh-solid black-90">Composition 8/28</p>
+        </li>
+        
+        <li>
+          <a href="#">
+            Are.na
           </a>
-        </article>
-
-
-      
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            <a target="_blank" href="https://genderedproject.org" class="bb link black">The Gendered Project</a>: identity, UX/UI, and front-end dev.
-          </p>
-        </div>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://genderedproject.org">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/gendered-logo.png);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="https://genderedproject.org" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">The Gendered Project</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            <a target="_blank" href="https://glitch.com/@seancaat" class="bb link black">Glitch</a> Projects
-          </p>
-        </div>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://vj.glitch.me/">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/kaytra.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="https://vj.glitch.me" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">VJ Tool</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://wavywavy.glitch.me">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/wave1.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="https://wavywavy.glitch.me" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Interactive Typography</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://brainf--k-visualizer.glitch.me/">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/bf.gif); background-position: 0% 0%"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="https://brainf--k-visualizer.glitch.me/" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Brainf*ck Visual Debugger</p>
-        </a>
-      </article>
-      <!-- =========== -->
-      <!-- REALLY FROM -->
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-title f3-ns fw3 ttu i'>
-            <a target="_blank" href="http://catangui.com/really-from-web" class="bb link black">Really From</a>, an interactive audiovisual album on cultural identity.
-          </p>
-        </div>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/really-from-web/1-solitude.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/solitude.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/really-from-web/1-solitude.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">SOLITUDE</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/really-from-web/3-another-mind.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/mind.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/really-from-web/3-another-mind.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">ANOTHER'S MIND</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/really-from-web/4-lucid.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/lucid.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/really-from-web/4-lucid.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">LUCID AMBIGUITY</p>
-        </a>
-      </article>
-      <!-- =========== -->
-      <!-- COMMERCIAL WORK -->
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-          <div class="aspect-ratio aspect-ratio--6x4 mb5">
-            <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-              <a target="_blank" href="https://dropmark.com" class="bb link black">Dropmark</a>: interaction design, animation, front-end dev.
-            </p>
-          </div>
-        </article>
-        <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-          <a target="_blank" href="https://dropmark.com">
-            <div class="aspect-ratio aspect-ratio--6x4">
-              <video width="100%" muted="muted" autoplay="autoplay" loop="loop" src="images/dropmark-illo.mp4"></video>
-            </div>
+        </li>
+        
+        <li>
+          <a href="#">
+            Twitter
           </a>
-          <a target="_blank" href="https://dropmark.com" class="ph0-ns pb3 link db">
-            <p class="f5 mb3 lh-solid black-90">Landing page animation</p>
+        </li>
+        
+        <li>
+          <a href="#">
+            Instagram
           </a>
-        </article>
-        <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-          <a target="_blank" href="https://dropmark.com">
-            <div class="aspect-ratio aspect-ratio--6x4">
-              <div class="aspect-ratio--object contain" style="background:url(images/dropmark-logo.gif); background-repeat: no-repeat"></div>
-            </div>
+        </li>
+        
+        <li>
+          <a href="#">
+            GitHub    
           </a>
-          <a target="_blank" href="https://dropmark.com" class="ph0-ns pb3 link db">
-            <p class="f5 mb3 lh-solid black-90">Interactive logo treaments</p>
-          </a>
-        </article>
+        </li>
+        
+      </ul>
+    </nav>
+    
+    <main>
+      <section>      
 
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            Commercial work: design and development
-          </p>
+        <div class="project">
+          <h2 class="draggable">
+            Generative Drawing –– Building a browser-based drawing tool and drawing pictures with it.  
+          </h2>
         </div>
-      </article>
 
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://support.dropmark.com">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/support.jpg);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://support.dropmark.com" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Dropmark Support</p>
-        </a>
-      </article>
+      </section>
 
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/geh/">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/geh-landing.jpg);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/geh/" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">GE Hitachi Microsite</p>
-        </a>
-      </article>
+      <section>      
 
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://deborahsaks.com">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/debbie.jpg);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://deborahsaks.com" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Deborah Saks Portfolio</p>
-        </a>
-      </article>
-
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="./design/music-map">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/music-map.png);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="./design/music-map" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Music Map</p>
-        </a>
-      </article>
-
-      <!-- SKETCHES -->
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            Sketching and "recreating the past" with the <a target="_blank" href="http://sfpc.io/" class="bb link black">School for Poetic Computation</a>.
-          </p>
+        <div class="project">
+          <h2 class="draggable">
+            <a href="#">The Gendered Project</a> –– Designed a dictionary of gendered words   
+          </h2>
         </div>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="https://molnar-x-ashby.glitch.me/">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/vera.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="https://molnar-x-ashby.glitch.me/" class="ph0-ns pb3 link db">
-          <p class="mb3 lh-solid black-90">Dorothy Ashby X Vera Molnar</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/15-cooper.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/damn.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/15-cooper.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Kendrick Lamar X Muriel Cooper</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/17.1-abstract.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/dots.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/17.1-abstract.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Color Test, Broad City Vibes</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/11-shapes.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/sabers.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/11-shapes.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Oscillation Study</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/14-poster.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/nothing.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/14-poster.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Type Study</p>
-        </a>
-      </article>
 
+      </section>
 
+      <section>      
 
-
-
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <div class="aspect-ratio aspect-ratio--6x4 mb5">
-          <p class='pv0 mv0 lh-copy f3-ns fw3 ttu i'>
-            Personal sketches including <a target="_blank" href="http://catangui.com/randomized-form" class="bb link black">Randomized Form</a>.
-          </p>
+        <div class="project">
+          <h2 class="draggable">
+            <a href="#">Dropmark.com</a> –– interactive logo treatments + baner animation.  
+          </h2>
         </div>
-      </article>
 
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/randomized-form#5">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/harmony.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/randomized-form#5" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Harmony</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/2-wiper.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/wiper.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/2-wiper.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Wiper Study</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/5-square-pulsator.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/pulse.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/5-square-pulsator.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Pulse</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/8-mouse-follow.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/draw.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/8-mouse-follow.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Poly-drawer</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/randomized-form#3">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/orbs.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/randomized-form#3" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Orbs</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="http://catangui.com/randomized-form#1">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/forms.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="http://catangui.com/randomized-form#1" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Composition Study</p>
-        </a>
-      </article>
-      <article class="fl w-50 w-third-l pv2 ph2 ph3-ns">
-        <a target="_blank" href="sketches/3-dot-scatter.html">
-          <div class="aspect-ratio aspect-ratio--6x4">
-            <img style="background-image:url(images/fireworks.gif);"
-            class="db bg-center cover aspect-ratio--object" />
-          </div>
-        </a>
-        <a target="_blank" href="sketches/3-dot-scatter.html" class="ph0-ns pb3 link db">
-          <p class="f5 mb3 lh-solid black-90">Fireworks</p>
-        </a>
-      </article>
-    </section>
-    <footer class="ph4-l pv3-m pv4">
-      <div class="fl ph2 ph3-ns pb5">
-        <a target="_blank" href="mailto:seancaat@gmail.com" class="link black lh-solid">
-          <h2 class="ttu i fw6 tracked-tight">seancaat@gmail.com</h2>
-        </a>
-        <p class="f6 db ttu lh-solid">© 2018 Sean Catangui</p>
-      </div>
-    </footer>
+      </section>
+
+      <section>      
+
+        <div class="project">
+          <h2 class="draggable">
+            <a>Browser Garden</a> –– Compilation of art inspired by <a href="#">Algorithmic Botany</a>.  
+          </h2>
+        </div>
+
+      </section>
+
+      <section>      
+
+        <div class="project">
+          <h2 class="draggable">
+            <a>REALLY FROM</a> –– Generative audiovisual art shown at <a href="https://sfpc.io/sevenyears/">Poetic Computation</a> exhibit at the Westbeth Gallery in NYC.  
+          </h2>
+        </div>
+
+      </section>
+
+      <section>      
+
+        <div class="project">
+          <h2 class="draggable">
+            <a href="asohblack.com">Asoh Black!</a> –– Interactive beat machine + generative animations.  
+          </h2>
+        </div>
+
+      </section>
+    </main>
+    
+    
+    
+    
+    
   </body>
 </html>
+
+
+
+
+<!--       <figure>
+        <img src="https://d2w9rnfcy7mm78.cloudfront.net/6231786/original_7557a2542b7a888286b24f452eab9abb.png?1582206045?bc=0">
+        <figcaption>Generative Drawing</figcaption>
+      </figure>
+      
+      <figure>
+        <img src="https://d2w9rnfcy7mm78.cloudfront.net/6576397/original_c6493845a3b69fc9c0969703b574c089.gif?1585109035?bc=0">
+        <figcaption>Generative Drawing</figcaption>
+      </figure>
+      
+      <figure>
+        <img src="https://d2w9rnfcy7mm78.cloudfront.net/6472111/original_2fb627adaf162f83c17f6ee95c2325e7.gif?1584413771?bc=0">
+        <figcaption>Generative Drawing</figcaption>
+      </figure> -->
+      

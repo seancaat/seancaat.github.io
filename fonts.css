@@ -1,0 +1,48 @@
+@font-face {
+  src: url('assets/TimesNow-Light/font.eot');
+  font-family: 'TimesNow-Light';
+  src: url('assets/TimesNow-Light/font.woff2') format('woff2'), url('assets/TimesNow-Light/font.woff') format('woff'), url('assets/TimesNow-Light/font.eot?#iefix') format('embedded-opentype'), url('assets/TimesNow-Light/font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextRegular-3.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextItalic-3.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextMedium-3.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextMediumItalic-3.woff") format("woff");
+  font-style: italic;
+  font-weight: 500;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextBold-3.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("https://type.cargo.site/NeueHaasGrotesk/NeueHaasGroteskTextBoldItalic-3.woff") format("woff");
+  font-style: italic;
+  font-weight: bold;
+  unicode-range: U+0000-DFFF, U+F900-FFFD;
+}

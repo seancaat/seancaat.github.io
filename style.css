@@ -1,0 +1,113 @@
+html {
+  font-family: "JHA Times Now";
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, nav ul {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  margin: 1rem;
+  position: fixed;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right;
+  bottom: 0rem;
+  right: 0rem;
+}
+
+a {
+  color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+img {
+  min-width: 16.5vw;
+  max-width: 33vw;
+}
+
+section {
+  display: table;
+  width: 100%;
+  text-align: center;
+  height: 95vh;
+  text-align: center;
+}
+
+div.project {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.project h2 {
+  font-family: "Neue Haas Grotesk";
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  max-width: 20em;
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  
+  nav ul {
+    top: 0;
+    bottom: inherit;
+  }
+  
+  section {
+    height: 80vh;
+    padding-bottom: 4rem;
+  }
+  
+  div.project {
+    vertical-align: bottom;
+  }
+  
+}
+
+
+
+
+
+figure img {
+  box-shadow: 1px 1px 4px 0px rgba( 0, 0, 0, 0.4 );
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  font-family: "Neue Haas Grotesk";
+  font-size: 20px;
+  font-weight: 400;
+/*   text-transform: uppercase; */
+}
