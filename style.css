@@ -1,113 +1,120 @@
-html {
+@font-face{
   font-family: "JHA Times Now";
-  color: #333;
+  src: url('font.woff2') format('woff2'),
+      url('font.woff') format('woff');
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "JHA Times Now", serif;
+  background-color:black;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  overflow: hidden;
 }
 
-h1, nav ul {
-  font-size: 2.5rem;
-  line-height: 2.75rem;
-  font-weight: 100;
-  letter-spacing: -0.05em;
-  margin: 1rem;
+h1 {
+  z-index: 0;
+  color:#F7F4EF;
+  display: block;
   position: fixed;
-}
-
-nav ul {
-  list-style-type: none;
-  text-align: right;
-  bottom: 0rem;
-  right: 0rem;
+  margin: 5vw;
+  font-weight: 200;
+  font-size: min(108px, 10vw);
+  line-height: 0.9em;
+  letter-spacing: -0.045em;
+  max-width: 7em;
 }
 
 a {
   color: black;
 }
 
-nav ul li a {
-  text-decoration: none;
+canvas {
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: difference;
+  /* this makes the text blend mode work */
+  background-color: #F7F4EF; 
 }
 
-img {
-  min-width: 16.5vw;
-  max-width: 33vw;
-}
-
-section {
-  display: table;
-  width: 100%;
-  text-align: center;
-  height: 95vh;
-  text-align: center;
-}
-
-div.project {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-div.project h2 {
-  font-family: "Neue Haas Grotesk";
-  font-weight: 400;
-  letter-spacing: -0.04em;
+footer {
+  font-family: sans-serif;
+  font-size: max(24px, 3vw);
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: lighter;
   text-transform: uppercase;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin: 0 auto;
-  max-width: 20em;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.draggable {
-  cursor: grab;
+footer ul {
+  width: 100%;
+  padding: 0;
 }
 
-.draggable:active {
-  cursor: grabbing;
+footer ul li {
+  display: inline-block;
+  list-style-type: none;
+  line-height: 1.5em;
+  margin-right:0.25em;
 }
 
+.button {
+  float: right;
+  text-decoration: none;
+  padding: 0.5em 0.75em;
+  border-radius: 100px;
+  border: 1px solid black;
+  background: black;
+  color: #F7F4EF;
+  font-size: 0.5em;
+  transition: 0.05s ease background;
+}
 
-
-
-
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 8px;
-  }
+.button:hover {
+  color:black;
+  cursor: pointer;
+  background: #F7F4EF;
   
-  nav ul {
-    top: 0;
-    bottom: inherit;
-  }
-  
-  section {
-    height: 80vh;
-    padding-bottom: 4rem;
-  }
-  
-  div.project {
-    vertical-align: bottom;
-  }
-  
 }
 
-
-
-
-
-figure img {
-  box-shadow: 1px 1px 4px 0px rgba( 0, 0, 0, 0.4 );
+footer ul li a:visited {
+  color: black;
 }
 
-figcaption {
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+@media screen and (max-width: 770px) {
+ h1 {
+   max-width: 100%;
+   font-size: 11vw;
+ }
+
+ .button {
+   float: none;
+ }
+
+ footer ul {
   text-align: center;
-  padding-top: 1em;
-  padding-bottom: 2em;
-  font-family: "Neue Haas Grotesk";
-  font-size: 20px;
-  font-weight: 400;
-/*   text-transform: uppercase; */
+ }
 }
