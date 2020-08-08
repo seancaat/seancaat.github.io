@@ -26,7 +26,7 @@ body {
   overflow: hidden;
 }
 
-p {
+h1 {
   z-index: 0;
   color:#F7F4EF;
   display: block;
@@ -117,11 +117,13 @@ a, footer ul li a:visited {
 @media screen and (max-width: 770px) {
  h1 {
    max-width: 100%;
-   font-size: 11vw;
+   font-size: 12vw;
  }
 
  .button {
    float: none;
+   line-height: 1.5em;
+   vertical-align: 0.35em;
  }
 
  footer ul {
