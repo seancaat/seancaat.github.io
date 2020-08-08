@@ -1,7 +1,17 @@
 @font-face{
   font-family: "JHA Times Now";
-  src: url('font.woff2') format('woff2'),
-      url('font.woff') format('woff');
+  src: url('./font.woff2') format('woff2'),
+      url('./font.woff') format('woff');
+      font-weight: 200;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: JHA Times Now;
+  src: url("./font-semiLight.eot");
+  src: url("./font-semiLight.woff2") format("woff2"), url("./font-semiLight.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -16,13 +26,16 @@ body {
   overflow: hidden;
 }
 
-h1 {
+p {
   z-index: 0;
   color:#F7F4EF;
   display: block;
   position: fixed;
   margin: 5vw;
   font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   font-size: min(108px, 10vw);
   line-height: 0.9em;
   letter-spacing: -0.045em;
@@ -30,6 +43,7 @@ h1 {
 }
 
 canvas {
+  cursor: crosshair;
   z-index: 1;
   margin: 0;
   padding: 0;
