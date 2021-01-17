@@ -37,7 +37,7 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: min(108px, 10vw);
-  line-height: 0.9em;
+  line-height: 0.95em;
   letter-spacing: -0.045em;
   max-width: 7em;
 }
@@ -78,7 +78,7 @@ footer ul li {
   display: inline-block;
   list-style-type: none;
   line-height: 1.5em;
-  margin-right:0.25em;
+  margin-right: 0.5em;
 }
 
 .button {
