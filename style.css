@@ -43,7 +43,7 @@ h1 {
 }
 
 canvas {
-  cursor: crosshair;
+  cursor: url("./pencil.svg"), crosshair;
   z-index: 1;
   margin: 0;
   padding: 0;
