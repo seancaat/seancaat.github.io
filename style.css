@@ -17,11 +17,17 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: "JHA Times Now", serif;
+  /* font-family: "JHA Times Now", serif; */
+  font-family: sans-serif;
   background-color:black;
 }
 
 body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: 0;
   overflow: hidden;
 }
@@ -30,16 +36,23 @@ h1 {
   z-index: 0;
   color:#F7F4EF;
   display: block;
-  position: fixed;
-  margin: 5vw;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  /* margin: 5vw; */
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-size: min(108px, 10vw);
-  line-height: 0.95em;
+  /* font-size: min(108px, 10vw); */
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 0.85em;
   letter-spacing: -0.045em;
-  max-width: 7em;
+  max-width: 90%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 canvas {
