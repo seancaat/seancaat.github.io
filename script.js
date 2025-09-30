@@ -7,7 +7,7 @@ var mid = {x: width /2, y: height / 2};
 tool.minDistance = 0.1 * width;
 
 var path = new Path();
-path.strokeWidth = (width > 700 ) ? 0.002 * width : (0.005 * width);
+path.strokeWidth = (width > 700 ) ? 0.002 * width : (0.003 * width);
 path.strokeCap = 'round';
 path.strokeColor = '#0B0A0F';
 

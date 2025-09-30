@@ -31,15 +31,16 @@ h1 {
   color:#F7F4EF;
   display: block;
   position: fixed;
-  margin: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-size: min(108px, 10vw);
+  font-size: min(64px, 10vw);
   line-height: 0.95em;
   letter-spacing: -0.045em;
-  max-width: 7em;
+  max-width: 12em;
 }
 
 canvas {
@@ -81,6 +82,11 @@ footer ul li {
   margin-right: 0.5em;
 }
 
+a, footer ul li a {
+  text-decoration: none;
+  border-bottom: 2px solid black;
+}
+
 .button {
   float: right;
   text-decoration: none;
@@ -117,7 +123,8 @@ a, footer ul li a:visited {
 @media screen and (max-width: 770px) {
  h1 {
    max-width: 100%;
-   font-size: 12vw;
+   box-sizing: border-box;
+   font-size: min(39px, 12vw);
  }
 
  .button {
