@@ -37,10 +37,17 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-size: min(64px, 10vw);
-  line-height: 0.95em;
+  font-size: min(60px, 10vw);
+  line-height: 1.05em;
   letter-spacing: -0.045em;
   max-width: 12em;
+}
+
+h1 a {
+  /* text-decoration: underline; */
+  /* text-decoration-thickness: 2px; */
+  color:#F7F4EF;
+  border-bottom: 2px solid #F7F4EF; 
 }
 
 canvas {
@@ -124,7 +131,7 @@ a, footer ul li a:visited {
  h1 {
    max-width: 100%;
    box-sizing: border-box;
-   font-size: min(39px, 12vw);
+   font-size: min(32px, 12vw);
  }
 
  .button {
