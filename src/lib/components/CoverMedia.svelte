@@ -39,12 +39,21 @@
 		io.observe(root);
 		return () => io.disconnect();
 	});
+
+	function togglePlayPause() {
+		if(videoEl?.paused) {
+			videoEl.play();
+		} else {
+			videoEl?.pause();
+		}
+	}
 </script>
 
 {#if showVideo}
 	<figure class="project-media project-media--video" bind:this={container}>
 		<video
 			bind:this={videoEl}
+			onclick={togglePlayPause}
 			muted
 			loop
 			playsinline
@@ -71,7 +80,7 @@
 		display: block;
 		width: 100%;
 		height: auto;
-		border-radius: 5px;
+		border-radius: var(--media-br);
 		outline: 0.5px solid var(--border);
 	}
 
@@ -80,7 +89,8 @@
 		width: 100%;
 		height: auto;
 		object-fit: cover;
-		border-radius: 5px;
+		border-radius: var(--media-br);
+		cursor: pointer;
 		outline: 0.5px solid var(--border);
 	}
 </style>

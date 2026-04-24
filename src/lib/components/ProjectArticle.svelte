@@ -58,7 +58,7 @@
 
 	.project-title {
 		text-align: left;
-		font-size: 32px;
+		font-size: 36px;
 		width: var(--body-copy-max-width);
 		max-width: 100%;
 		margin: 0 auto;
@@ -75,13 +75,14 @@
 
 	.project-covers {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		gap: 1rem;
-		max-width: 50rem;
+		max-width: calc(var(--body-copy-max-width) + var(--media-br));
 		margin: 0 auto;
 	}
 
 	.project-description {
+		width: 100%;
 		max-width: var(--body-copy-max-width);
 		margin: 0 auto;
 	}
@@ -97,10 +98,9 @@
 	}
 
 	.project-award {
-		margin: 0.75rem 0;
+		margin: 1rem 0 0.5rem;
 		font-size: 0.95rem;
 		font-family: var(--sans);
-		color: var(--muted);
 		line-height: 1.45;
 	}
 

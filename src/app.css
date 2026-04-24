@@ -7,11 +7,15 @@
 }
 
 :root {
-	--bg: #f7f4ef;
-	--fg: #1a1a1a;
-	--muted: #555;
-	--rule: rgba(26, 26, 26, 0.18);
-	--border: #bcb8b2;
+	/* --bg: #f7f4ef; */
+	--bg: #054CF1;
+	/* --fg: #1a1a1a; */
+	--fg: #edd2ff;
+	/* --muted: #555; */
+	--muted: #bfabcc;
+	--rule: rgba(255, 255, 255, 0.18);
+	/* --border: #bcb8b2; */
+	--media-br: 0.5rem;
 	--label: #333;
 	--accent-border: currentColor;
 	--serif: 'JHA Times Now', 'Times New Roman', serif;
