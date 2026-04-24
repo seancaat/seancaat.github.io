@@ -19,7 +19,8 @@ export function richTextToHtml(rich: RichTextItemResponse[]): string {
 		if (annotations.bold) chunk = `<strong>${chunk}</strong>`;
 		if (annotations.italic) chunk = `<em>${chunk}</em>`;
 		if (annotations.strikethrough) chunk = `<s>${chunk}</s>`;
-		if (href) chunk = `<a href="${escapeHtml(href)}">${chunk}</a>`;
+		if (href)
+			chunk = `<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${chunk}</a>`;
 		out += chunk;
 	}
 	return out;

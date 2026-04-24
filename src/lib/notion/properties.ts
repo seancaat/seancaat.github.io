@@ -141,6 +141,8 @@ export function getCoverMediaUrls(
 
 export function shouldIncludeRow(page: PageObjectResponse): boolean {
 	if (!isFullPage(page)) return false;
+	const use = getCheckbox(page, ['Use', 'use']);
+	if (use !== null) return use;
 	const pub = getCheckbox(page, ['Published', 'published', 'Live', 'live']);
 	if (pub === null) return true;
 	return pub;

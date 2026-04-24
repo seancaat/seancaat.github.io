@@ -16,6 +16,7 @@
 	--accent-border: currentColor;
 	--serif: 'JHA Times Now', 'Times New Roman', serif;
 	--sans: system-ui, sans-serif;
+	--body-copy-max-width: 42rem;
 }
 
 *,
@@ -44,14 +45,8 @@ a {
 	text-underline-offset: 0.18em;
 }
 
-.project-copy a {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-}
-
 .site-wrap {
-	max-width: 42rem;
-	margin: 0 auto;
+	width: 100%;
 	padding: 3rem 1.25rem 5rem;
 }
 
@@ -78,134 +73,4 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 6rem;
-}
-
-.project {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.project-num {
-	font-family: var(--sans);
-	font-weight: 400;
-	font-size: 0.875rem;
-	text-align: center;
-	letter-spacing: 0.06em;
-	margin: 0;
-}
-
-.project-title {
-	text-align: center;
-	font-size: 36px;
-	max-width: 12em;
-	margin: 0 auto;
-	font-weight: 400;
-	line-height: 1.1;
-	letter-spacing: -0.05rem;
-}
-
-.project-title a {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 0.15em;
-}
-
-.project-covers {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	width: 100%;
-}
-
-.project-media {
-	margin: 0;
-	width: 100%;
-}
-
-.project-media img,
-.project-media-video {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.project-media-video {
-	object-fit: cover;
-}
-
-.project-copy {
-	margin: 0;
-	color: var(--fg);
-}
-
-.project-copy p {
-	margin: 0 0 0.75rem;
-}
-
-.project-award {
-	margin: 0 0 0.75rem;
-	font-size: 0.95rem;
-	font-family: var(--sans);
-	color: var(--muted);
-	line-height: 1.45;
-}
-
-.project-credits {
-	margin: 0.5rem 0 0;
-	font-size: 0.95rem;
-	color: var(--muted);
-}
-
-.project-credits p {
-	margin: 0;
-}
-
-.site-footer {
-	margin-top: 4rem;
-	padding-top: 2rem;
-	border-top: 1px solid var(--rule);
-}
-
-.footer-links {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.75rem 1.25rem;
-	align-items: baseline;
-	font-family: var(--sans);
-	font-weight: 400;
-	text-transform: uppercase;
-}
-
-.footer-email {
-	margin-left: auto;
-	text-decoration: none;
-	padding: 0.45em 0.85em;
-	border-radius: 999px;
-	border: 1px solid var(--fg);
-	background: var(--fg);
-	color: var(--bg);
-	font-size: 0.72em;
-	text-transform: uppercase;
-	letter-spacing: 0.06em;
-	transition: background 0.08s ease, color 0.08s ease;
-}
-
-.footer-email:hover {
-	background: var(--bg);
-	color: var(--fg);
-}
-
-@media (max-width: 560px) {
-	.footer-links {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.footer-email {
-		margin-left: 0;
-	}
 }

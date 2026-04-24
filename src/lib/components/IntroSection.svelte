@@ -1,8 +1,11 @@
 <script lang="ts">
+	import face from '$lib/assets/face.webp';
+
 	let { content }: { content: string } = $props();
 </script>
 
 <section class="intro" aria-label="Introduction">
+	<img src={face} alt="Sean Catangui" class="face-thumbnail"/>
 	<div class="intro-body">
 		{@html content}
 	</div>
@@ -12,6 +15,8 @@
 
 <style>
 	.intro {
+		max-width: var(--body-copy-max-width);
+		margin: 0 auto;
 		margin-bottom: 3rem;
 	}
 
@@ -72,6 +77,7 @@
 	.intro-divider {
 		border: none;
 		border-top: 1px solid var(--rule);
-		margin: 3rem 0;
+		margin: 3rem auto;
+		max-width: var(--body-copy-max-width);		
 	}
 </style>

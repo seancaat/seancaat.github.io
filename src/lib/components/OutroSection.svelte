@@ -10,10 +10,20 @@
 	</div>
 </section>
 
+<footer class="site-footer">
+	<ul class="footer-links">
+		<li><a href="https://www.are.na/sean-catangui/channels" target="_blank" rel="noreferrer">are.na</a></li>
+		<li><a href="https://github.com/seancaat" target="_blank" rel="noreferrer">GitHub</a></li>
+		<li>
+			<a class="footer-email" href="mailto:seancaat@gmail.com" rel="noreferrer">Email</a>
+		</li>
+	</ul>
+</footer>
+
 <style>
-	.outro {
-		margin-top: 1rem;
-		margin-bottom: 2rem;
+	.outro, footer {
+		max-width: var(--body-copy-max-width);
+		margin: 1rem auto 2rem;
 	}
 
 	.outro-body :global(a) {
@@ -35,7 +45,7 @@
 		font-weight: 400;
 		font-size: 1rem;
 		text-transform: uppercase;
-		margin: 1.25rem 0 0.5rem;
+		margin: 1.5rem 0 0.5rem;
 	}
 
 	.outro-body :global(p) {
@@ -72,7 +82,37 @@
 
 	.outro-divider {
 		border: none;
+		max-width: var(--body-copy-max-width);
 		border-top: 1px solid var(--rule);
-		margin: 3rem 0;
+		margin: 3rem auto;
+	}
+
+	.site-footer {
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--rule);
+	}
+
+	.footer-links {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem 1.25rem;
+		align-items: baseline;
+		font-family: var(--sans);
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	.footer-links a {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+	}
+
+	.footer-email:hover {
+		background: var(--bg);
+		color: var(--fg);
 	}
 </style>
