@@ -24,10 +24,40 @@
 				<p>No projects loaded. Add rows in your Notion database, or connect your integration and environment variables.</p>
 			{/if}
 		{/each}
+		{#if data.outroHtml}
+			<OutroSection content={data.outroHtml} />
+		{/if}
 	</section>
 
-	{#if data.outroHtml}
-		<OutroSection content={data.outroHtml} />
-	{/if}
+	
 
 </div>
+
+<style>
+	.site-wrap {
+		width: 100%;
+		margin-top: 1rem;
+		padding: 0 1.25rem;
+		display: grid;
+		grid-template-columns: 10rem 1fr 1fr 1fr 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		gap: 5.25rem;
+		grid-column: 3 / 7;
+	}
+
+	@media (max-width: 700px) {
+		.site-wrap {
+			margin-top: 0;
+			gap: 2rem;
+		}
+
+		.projects {
+			grid-column: 1 / -1;	
+		}
+	}
+</style>

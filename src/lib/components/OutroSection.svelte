@@ -1,29 +1,43 @@
 <script lang="ts">
+	import face from '$lib/assets/face.webp';
 	let { content }: { content: string } = $props();
 </script>
 
-<hr class="outro-divider" />
+<!-- <hr class="outro-divider" /> -->
 
 <section class="outro" aria-label="Additional information">
 	<div class="outro-body">
 		{@html content}
 	</div>
+	<img src={face} alt="Sean Catangui" class="face-thumbnail"/>
 </section>
 
-<footer class="site-footer">
-	<ul class="footer-links">
-		<li><a href="https://www.are.na/sean-catangui/channels" target="_blank" rel="noreferrer">are.na</a></li>
-		<li><a href="https://github.com/seancaat" target="_blank" rel="noreferrer">GitHub</a></li>
-		<li>
-			<a class="footer-email" href="mailto:seancaat@gmail.com" rel="noreferrer">Email</a>
-		</li>
-	</ul>
-</footer>
+
 
 <style>
-	.outro, footer {
-		max-width: var(--body-copy-max-width);
-		margin: 1rem auto 2rem;
+
+	.outro {
+		grid-column: 3 / 7;
+		border-top: 0.75px solid var(--rule);
+		min-height: calc(100vh - 1rem);
+		line-height: 1.3;
+		padding-top: 0.75rem;
+		/* outline: 1px solid red; */
+	}
+
+	.face-thumbnail {
+		display: block;
+		width: 4rem;
+		height: auto;
+		border-radius: 2px;
+		margin: 1rem 0;
+	}
+	
+
+	@media (max-width: 700px) {
+		.outro {
+			grid-column: 1 / -1;
+		}
 	}
 
 	.outro-body :global(a) {
@@ -43,9 +57,10 @@
 	.outro-body :global(h4) {
 		font-family: var(--sans);
 		font-weight: 400;
-		font-size: 1rem;
+		font-size: 0.875rem;
 		text-transform: uppercase;
-		margin: 1.5rem 0 0.5rem;
+		margin: 0.5rem 0 0.2rem;
+		letter-spacing: 0.02em;
 	}
 
 	.outro-body :global(p) {
@@ -78,41 +93,5 @@
 		display: block;
 		width: 100%;
 		height: auto;
-	}
-
-	.outro-divider {
-		border: none;
-		max-width: var(--body-copy-max-width);
-		border-top: 1px solid var(--rule);
-		margin: 3rem auto;
-	}
-
-	.site-footer {
-		margin-top: 4rem;
-		padding-top: 2rem;
-		border-top: 1px solid var(--rule);
-	}
-
-	.footer-links {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem 1.25rem;
-		align-items: baseline;
-		font-family: var(--sans);
-		font-weight: 300;
-		text-transform: uppercase;
-	}
-
-	.footer-links a {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-	}
-
-	.footer-email:hover {
-		background: var(--bg);
-		color: var(--fg);
 	}
 </style>

@@ -7,15 +7,28 @@
 }
 
 :root {
-	/* --bg: #f7f4ef; */
-	--bg: #054CF1;
-	/* --fg: #1a1a1a; */
-	--fg: #edd2ff;
-	/* --muted: #555; */
-	--muted: #bfabcc;
-	--rule: rgba(255, 255, 255, 0.18);
-	/* --border: #bcb8b2; */
-	--media-br: 0.5rem;
+	--bg: #ececec;
+	/* --bg: #0b3ca7; */
+	/* --bg: #054CF1; */
+	/* --bg: #1a1512; */
+	/* --bg: #839CD2; */
+
+	--fg: #1a1a1a;
+	/* --fg: #edd2ff; */
+	/* --fg: rgb(241, 241, 241); */
+	/* --fg: #FDF7EB; */
+
+	--muted: #555;
+	/* --muted: #bfabcc; */
+
+	/* --rule: rgba(255, 255, 255, 0.18); */
+	/* --rule: rgba(0, 0, 0, 0.5); */
+	/* --rule: rgba(255, 255, 255, 0.5); */
+	/* --rule: #FDF7EB; */
+
+	--rule: #aaa7a2;
+
+	--media-br: 2px;
 	--label: #333;
 	--accent-border: currentColor;
 	--serif: 'JHA Times Now', 'Times New Roman', serif;
@@ -33,6 +46,7 @@ html {
 	margin: 0;
 	padding: 0;
 	font-family: var(--serif);
+	letter-spacing: -0.02em;
 	background-color: var(--bg);
 	color: var(--fg);
 	-webkit-font-smoothing: antialiased;
@@ -49,9 +63,8 @@ a {
 	text-underline-offset: 0.18em;
 }
 
-.site-wrap {
-	width: 100%;
-	padding: 3rem 1.25rem 5rem;
+a:hover {
+	text-decoration: none;
 }
 
 .site-notice {
@@ -65,16 +78,3 @@ a {
 	color: #5c4a1f;
 }
 
-.face-thumbnail {
-	display: block;
-	width: 8rem;
-	height: auto;
-	border-radius: 2px;
-	margin: 1rem 0;
-}
-
-.projects {
-	display: flex;
-	flex-direction: column;
-	gap: 6rem;
-}

@@ -7,29 +7,31 @@
 </script>
 
 <article class="project">
-	<p class="project-num">
-		{typeof project.order === 'number' ? project.order + 1 : index + 1} of {totalCount}
-	</p>
-	<h2 class="project-title">
-		{#if project.url}
-			<a href={project.url} target="_blank" rel="noreferrer">{project.title}</a>
-		{:else}
-			{project.title}
+	<div class="project-info">
+		<h2 class="project-title">
+			<span class="project-num">
+				{typeof project.order === 'number' ? project.order + 1 : index + 1}.
+			</span>
+			{#if project.url}
+				<a href={project.url} target="_blank" rel="noreferrer">{project.title}</a>
+			{:else}
+				{project.title}
+			{/if}
+		</h2>
+		{#if project.descriptionHtml}
+			<div class="project-description">
+				{#if project.descriptionHtml}
+					<p class="project-copy">{@html project.descriptionHtml}</p>
+				{/if}
+				{#if project.awardHtml}
+					<p class="project-award">{@html project.awardHtml}</p>
+				{/if}
+				{#if project.creditsHtml}
+					<p class="project-credits">{@html project.creditsHtml}</p>
+				{/if}
+			</div>
 		{/if}
-	</h2>
-	{#if project.descriptionHtml}
-		<div class="project-description">
-			{#if project.descriptionHtml}
-				<p class="project-copy">{@html project.descriptionHtml}</p>
-			{/if}
-			{#if project.awardHtml}
-				<p class="project-award">{@html project.awardHtml}</p>
-			{/if}
-			{#if project.creditsHtml}
-				<p class="project-credits">{@html project.creditsHtml}</p>
-			{/if}
-		</div>
-	{/if}
+	</div>
 	{#if project.coverUrls.length}
 		<div class="project-covers">
 			{#each project.coverUrls as url, k (`${project.title}-${index}-${k}`)}
@@ -41,30 +43,35 @@
 
 <style>
 	.project {
+		padding-top: 0.75rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		border-top: 0.75px solid var(--rule);
 	}
 
-	.project-num {
-		font-family: var(--sans);
+	.project-info {
+		font-family: var(--serif);
+		color: var(--fg);
 		font-weight: 400;
-		font-size: 0.875rem;
-		letter-spacing: 0.06em;
-		width: min(var(--body-copy-max-width), 100%);
+		line-height: 1.3;
+		max-width: var(--body-copy-max-width);
 		text-align: left;
+		margin-right: auto
+	}
+
+	.project-covers {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		margin: 0 auto;
 	}
 
 	.project-title {
-		text-align: left;
-		font-size: 36px;
-		width: var(--body-copy-max-width);
-		max-width: 100%;
-		margin: 0 auto;
+		margin: 0;
+		font-size: inherit;
+		font-style: italic;
 		font-weight: 400;
-		line-height: 1.1;
-		letter-spacing: -0.05rem;
 	}
 
 	.project-title a {
@@ -73,23 +80,14 @@
 		text-underline-offset: 0.15em;
 	}
 
-	.project-covers {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		max-width: calc(var(--body-copy-max-width) + var(--media-br));
-		margin: 0 auto;
-	}
-
 	.project-description {
 		width: 100%;
-		max-width: var(--body-copy-max-width);
 		margin: 0 auto;
 	}
 
 	.project-copy {
 		margin: 0;
-		color: var(--fg);
+		text-indent: 2.75em;
 	}
 
 	.project-copy :global(a) {
@@ -98,10 +96,13 @@
 	}
 
 	.project-award {
-		margin: 1rem 0 0.5rem;
+		margin-top: 0.25em;
+		margin-bottom: 0;
 		font-size: 0.95rem;
 		font-family: var(--sans);
+		font-weight: 500;
 		line-height: 1.45;
+		color: var(--muted);
 	}
 
 	.project-credits {
@@ -114,10 +115,6 @@
 		.project-covers {
 			flex-direction: column;
 			gap: 1rem;
-		}
-
-		.project-title {
-			font-size: 24px;
 		}
 	}
 </style>
