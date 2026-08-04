@@ -10,7 +10,7 @@
 	<div class="project-info">
 		<h2 class="project-title">
 			<span class="project-num">
-				{typeof project.order === 'number' ? project.order + 1 : index + 1}.
+				{project.order ?? index + 1}.
 			</span>
 			{#if project.url}
 				<a href={project.url} target="_blank" rel="noreferrer">{project.title}</a>
@@ -58,6 +58,10 @@
 		max-width: var(--body-copy-max-width);
 		text-align: left;
 		margin-right: auto
+	}
+
+	.project-num {
+		font-style: normal;
 	}
 
 	.project-covers {

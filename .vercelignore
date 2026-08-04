@@ -1,0 +1,3 @@
+# Mirrored at build time on Vercel; avoid uploading local copies via CLI.
+static/media/*
+!static/media/.gitkeep

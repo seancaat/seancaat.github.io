@@ -35,7 +35,7 @@ The UI reads common property **names** (you can rename in Notion; aliases are li
 | Credits        | Rich text      | Credits, With, Collaborators |
 | Hide row       | Checkbox       | Published / Live — if present, unchecked rows are hidden |
 
-**Cover images / video:** A **Files & media** column (e.g. `Files`) wins over URL columns. Uploads use Notion-hosted URLs that **expire** after a while — redeploy/rebuild to refresh. Paths ending in `.mp4`, `.mov`, `.m4v`, `.webm`, or `.ogg` render as inline video (muted, looping, no controls; plays in view only). Other URLs render as images. For stable long-term hosting, prefer pasting a CDN URL in a URL column instead of uploading to Notion.
+**Cover images / video:** A **Files & media** column (e.g. `Files`) wins over URL columns. Uploads use Notion-hosted URLs that **expire** after ~1 hour in the raw API response. At **build time**, the site downloads those files into `static/media/` and serves them from your domain (Vercel’s CDN). External URLs in a URL column are left as-is. Paths ending in `.mp4`, `.mov`, `.m4v`, `.webm`, or `.ogg` render as inline video (muted, looping, no controls; plays in view only). Other URLs render as images.
 
 **Note:** Some Notion file URLs omit the file extension in the path; if a video is treated as an image, use a URL field with a clear `.mov` / `.mp4` path or rename the asset so the link includes the extension.
 

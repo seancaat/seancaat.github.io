@@ -20,6 +20,7 @@ import {
 	getUrl
 } from './properties';
 import { parseNotionId } from './ids';
+import { mirrorPortfolioMedia } from './mirror-media';
 import type { PortfolioLoad, Project } from './types';
 
 function emptyPortfolio(siteNotice: string | null): PortfolioLoad {
@@ -43,9 +44,8 @@ function pickNumberSortKey(ds: DataSourceObjectResponse): string | undefined {
 	return num?.name;
 }
 
-function mapPageToProject(page: PageObjectResponse, index: number): Project {
-	const order =
-		getNumber(page, ['Order', 'order', '#', 'Number', 'Sort', 'Index']) ?? index;
+function mapPageToProject(page: PageObjectResponse): Project {
+	const order = getNumber(page, ['Order', 'order', '#', 'Number', 'Sort', 'Index']);
 	const description =
 		getRichTextHtml(page, ['Description', 'description', 'Body', 'Summary']) ?? '';
 	const credits = getRichTextHtml(page, ['Credits', 'credits', 'With', 'Collaborators']);
@@ -199,14 +199,19 @@ export async function loadPortfolio(options: {
 		for (const row of res.results) {
 			if (!isFullPage(row)) continue;
 			if (!shouldIncludeRow(row)) continue;
-			projects.push(mapPageToProject(row, projects.length));
+			projects.push(mapPageToProject(row));
 		}
 
 		if (!res.has_more) break;
 		cursor = res.next_cursor ?? undefined;
 	}
 
-	projects.sort((a, b) => a.order - b.order);
+	projects.sort((a, b) => {
+		if (a.order != null && b.order != null) return a.order - b.order;
+		if (a.order != null) return -1;
+		if (b.order != null) return 1;
+		return 0;
+	});
 
 	const notices: string[] = [];
 	if (introPageId && !introParsed) {
@@ -220,10 +225,12 @@ export async function loadPortfolio(options: {
 		);
 	}
 
-	return {
+	const portfolio: PortfolioLoad = {
 		projects,
 		introHtml,
 		outroHtml,
 		siteNotice: notices.length ? notices.join(' ') : null
 	};
+
+	return mirrorPortfolioMedia(portfolio);
 }

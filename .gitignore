@@ -8,6 +8,10 @@ node_modules
 /.svelte-kit
 /build
 
+# Notion media mirrored at build time
+/static/media/*
+!/static/media/.gitkeep
+
 # OS
 .DS_Store
 Thumbs.db

@@ -1,6 +1,6 @@
 export type Project = {
-	/** Display order (fallback: creation order). */
-	order: number;
+	/** Notion Order column value; null when unset (sort/display fall back to list position). */
+	order: number | null;
 	title: string;
 	url: string | null;
 	/** Ordered cover assets (files column can supply many). */
